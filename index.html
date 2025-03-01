@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Magazine Article</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 20px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Magazine Article</h1>
+    <button onclick="showRandomArticle()">Get Random Article</button>
+
+    <script>
+        const magazineLinks = [
+            { name: "Mousse Magazine", url: "https://www.moussemagazine.it/" },
+            { name: "The Face", url: "https://theface.com/" },
+            { name: "Spike Art Magazine", url: "https://spikeartmagazine.com/" },
+            { name: "Mike Pepi Writing", url: "https://www.mikepepi.com/writing" },
+            { name: "Clash Music", url: "https://www.clashmusic.com/" },
+            { name: "Another Man", url: "https://www.anothermanmag.com/" },
+            { name: "Interview Magazine", url: "https://www.interviewmagazine.com/" },
+            { name: "SevenOneThree Magazine", url: "https://sevenonethreemag.com/" },
+            { name: "Dazed Digital", url: "https://www.dazeddigital.com/" },
+            { name: "Frieze", url: "https://www.frieze.com/editorial" },
+            { name: "Wallpaper", url: "https://www.wallpaper.com/" },
+            { name: "Artforum", url: "https://www.artforum.com/" },
+            { name: "Aperture", url: "https://aperture.org/" },
+            { name: "Hunger Magazine", url: "https://hungermag.com/" },
+            { name: "Dismagazine", url: "https://dismagazine.com/" },
+            { name: "Whitney Stories", url: "https://whitney.org/whitney-stories" },
+            { name: "MoMA Magazine", url: "https://www.moma.org/magazine/" },
+            { name: "Bomb Magazine", url: "https://bombmagazine.org/" },
+            { name: "Sculpture Magazine", url: "https://sculpturemagazine.art/" },
+            { name: "Film Comment", url: "https://www.filmcomment.com/" },
+            { name: "Log FakeWhale", url: "https://log.fakewhale.xyz/" },
+            { name: "Crack Magazine", url: "https://crackmagazine.net/" }
+        ];
+
+        function showRandomArticle() {
+            const randomIndex = Math.floor(Math.random() * magazineLinks.length);
+            const randomArticle = magazineLinks[randomIndex];
+            // 현재 창에서 URL 변경 (새 창이 아니라)
+            window.location.href = randomArticle.url;
+        }
+    </script>
+</body>
+</html>
